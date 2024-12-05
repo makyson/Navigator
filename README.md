@@ -1,7 +1,8 @@
 # Navigator
 
-| ![Gesso Integral Logo](https://sistema2.gessointegral.com.br/industria/sistema/imagens/gessointegral_new_logo.jpeg) | **Navigator** | ![PHP Logo](https://www.php.net/images/logos/php-logo.svg) |
-| :-----------------------------------------------------------------------------------------------------------------: | :-----------: | :--------------------------------------------------------: |
+| ![Gesso Integral Logo](https://sistema2.gessointegral.com.br/industria/sistema/imagens/gessointegral_new_logo.jpeg){width=80px} | **Navigator** | ![PHP Logo](https://www.php.net/images/logos/php-logo.svg){width=60px} |
+| :---------------------------------------------------------------------------------------------------------------------------: | :-----------: | :--------------------------------------------------------------------: |
+
 
 ## O que é Navigator?
 
