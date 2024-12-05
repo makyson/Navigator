@@ -1,7 +1,9 @@
 # Navigator
 
-| ![Gesso Integral Logo](https://sistema2.gessointegral.com.br/industria/sistema/imagens/gessointegral_new_logo.jpeg){width=5px} | **Navigator** | ![PHP Logo](https://cdn.freebiesupply.com/logos/large/2x/php-1-logo-png-transparent.png)){width=30px} |
-| :---------------------------------------------------------------------------------------------------------------------------: | :-----------: | :--------------------------------------------------------------------: |
+<!-- markdownlint-disable MD033 MD034 -->
+
+| <img src="https://sistema2.gessointegral.com.br/industria/sistema/imagens/gessointegral_new_logo.jpeg" alt="Gesso Integral Logo" width="80"> | **Navigator** | <img src="https://cdn.freebiesupply.com/logos/large/2x/php-1-logo-png-transparent.png" alt="PHP Logo" width="80"> |
+| :------------------------------------------------------------------------------------------------------------------------------------------: | :-----------: | :---------------------------------------------------------------------------------------------------------------: |
 
 
 ## O que é Navigator?
