@@ -1,60 +1,37 @@
-<div style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 10px; background-color: #2a2a2a; color: white; border-bottom: 2px solid #444;">
-    <div style="display: flex; align-items: center; gap: 15px;">
-        <a href="https://gessointegral.com.br">
-            <img
-                alt="Gesso Integral"
-                src="https://sistema2.gessointegral.com.br/industria/sistema/imagens/gessointegral_new_logo.jpeg"
-                width="120"
-                style="border-radius: 5px;">
-        </a>
-        <h1 style="margin: 0;padding-top:1px; font-size: 2.8rem; color: white;">Navigator</h1>
-    </div>
-    <div>
-        <a href="https://www.php.net">
-            <img
-                alt="PHP"
-                src="https://www.php.net/images/logos/new-php-logo.svg"
-                width="120"
-                style="border-radius: 50%;">
-        </a>
-    </div>
-</div>
+# Navigator
 
-<h2 style="color: white; margin-top: 20px; text-align: start;">
-    O que é Navigator?
-</h2>
+| ![Gesso Integral Logo](https://sistema2.gessointegral.com.br/industria/sistema/imagens/gessointegral_new_logo.jpeg) | **Navigator** | ![PHP Logo](https://www.php.net/images/logos/php-logo.svg) |
+| :-----------------------------------------------------------------------------------------------------------------: | :-----------: | :--------------------------------------------------------: |
 
-<p>
-    O <strong>Navigator</strong> é um pacote PHP inspirado nos sistemas de roteamento do <strong>Express.js</strong> (Node.js) e do <strong>Navigator</strong> (PHP). Ele visa ser um esqueleto de projeto PHP simples de configurar e usar, permitindo inicializações rápidas e flexíveis.
-</p>
+## O que é Navigator?
+
+O **Navigator** é um pacote PHP inspirado nos sistemas de roteamento do **Express.js** (Node.js) e do **Navigator** (PHP). Ele visa ser um esqueleto de projeto PHP simples de configurar e usar, permitindo inicializações rápidas e flexíveis.
 
 ---
 
-# Requisitos Iniciais
+## Requisitos Iniciais
 
-O <strong>Navigator</strong> requer algumas configurações básicas para funcionar corretamente, como a ativação da extensão <code>pdo_mysql</code>. Abaixo, explicamos como verificar e ativar esta extensão em seu ambiente PHP.
+O **Navigator** requer algumas configurações básicas para funcionar corretamente, como a ativação da extensão `pdo_mysql`. Abaixo, explicamos como verificar e ativar esta extensão em seu ambiente PHP.
 
-<p>
-  Procure por <code>extension=pdo_mysql</code> e <code>extension=fileinfo</code> no arquivo <code>php.ini</code>.
-  Caso esteja comentado (com um ponto e vírgula <code>;</code> no início),
-  remova o <code>;</code> para ativar a extensão:
-</p>
+Procure por `extension=pdo_mysql` e `extension=fileinfo` no arquivo `php.ini`.
+Caso esteja comentado (com um ponto e vírgula `;` no início),
+remova o `;` para ativar a extensão:
 
-<pre><code class="ini">
+```ini
 ;extension=pdo_mysql
 ;extension=fileinfo
-</code></pre>
+```
 
-<p>Altere para:</p>
+Altere para:
 
-<pre><code class="ini">
+```ini
 extension=pdo_mysql
 extension=fileinfo
-</code></pre>
+```
 
-### Configuração Inicial
+## Configuração Inicial
 
-criando uma <code>instacia</code> para acessar os metodos
+criando uma `instacia` para acessar os metodos
 
 ```php
 // Caso o seu autoload seja via Composer
@@ -71,7 +48,9 @@ $router->get('/', function () {
 Navigator::start();
 ```
 
- <h1>Ou</h1>usando o proprio <code>objeto</code> pra acessar os metodos
+## Ou
+
+usando o próprio `objeto` pra acessar os métodos
 
 ```php
 // Caso o seu autoload seja via Composer
@@ -86,9 +65,9 @@ Navigator::get('/', function () {
 Navigator::start();
 ```
 
-# atençao no final do index ou do arquivo de rota
+## atençao no final do index ou do arquivo de rota
 
-use <code>Navigator::start();</code> pra avisar o ponto final.
+use `Navigator::start();` pra avisar o ponto final.
 
 ```php
 require 'vendor/autoload.php';
@@ -100,13 +79,13 @@ Navigator::start();
 
 ---
 
-# Métodos Disponíveis no Navigator
+## Métodos Disponíveis no Navigator
 
 O Navigator fornece diversos métodos para gerenciar rotas de forma simples e eficiente. Aqui estão os métodos disponíveis e exemplos de uso:
 
 ---
 
-### Sintaxe:
+## Sintaxe
 
 Registra uma rota para requisições HTTP do tipo `GET`.
 
@@ -158,15 +137,13 @@ Navigator::delete('/', function () {
 
 ---
 
-## Rotas adicionais:
+## Rotas adicionais
 
 Registra uma rota para requisições **ACEITA TODOS OS METODOS** para `GROUP`.
 
 Cria um grupo de rotas com um prefixo compartilhado.
 
-a saida seria
-<code> http://localhost/admin/dashboard </code> e
-<code> http://localhost/localhost/admin/login </code>
+a saida seria `http://localhost/admin/dashboard` e `http://localhost/localhost/admin/login`
 
 ```php
 // /admin/dashboard
@@ -187,7 +164,7 @@ Registra uma rota que aceita múltiplos métodos HTTP: GET, POST, PUT, PATCH, DE
 
 A função MAP é usada para registrar rotas que aceitam múltiplos métodos HTTP. Ela permite uma maior flexibilidade ao definir os métodos que a rota aceita, e suporta o uso de caracteres curingas para capturar partes dinâmicas da URL.
 
-#### aceita todos os metodos
+### aceita todos os metodos
 
 ```php
 // aceita todos os metodos
@@ -216,9 +193,9 @@ Navigator::map('GET|POST *', function () {
 
 ---
 
-# Parametros
+## Parametros
 
-a entrada seria http://localhost/user/victor
+A entrada seria [http://exemplo/user/@name](http://exemplo/user/@name)
 
 ```php
 Navigator::get('/user/@name', function ($name) {
@@ -226,7 +203,7 @@ Navigator::get('/user/@name', function ($name) {
 });
 ```
 
-a entrada seria http://localhost/user?name=victor
+A entrada seria [http://exemplo/user?name=victor](http://exemplo/user?name=victor)
 
 ```php
 Navigator::get('/user', function () {
@@ -237,7 +214,7 @@ Navigator::get('/user', function () {
 });
 ```
 
-a entrada seria http://localhost/user
+A entrada seria [http://exemplo/user](http://exemplo/user)
 
 ```json
 {
@@ -276,9 +253,7 @@ $body = Navigator::request()->getBody();
 
 Entrada JSON
 
-```json
-Se você enviar uma solicitação com o tipo application/jsone os dados, {"id": 123} eles estarão disponíveis na datapropriedade:
-```
+Se você enviar uma solicitação com o tipo application/jsone os dados, ´{"id": 123}´ eles estarão disponíveis na datapropriedade:
 
 Você pode acessar o $\_COOKIEarray através da propriedade cookies:
 
@@ -512,7 +487,8 @@ Navigator::response()->addResponseBodyCallback(function($body) {
 }
 ```
 
-atençao os Middleware pode ser aplicados <code> apenas em rotas do tipo group</code>
+atenção: os Middlewares podem ser aplicados `apenas em rotas do tipo group`.
+
 mais caso querira usalos em outros metodos use dentro do calback da funçao
 
 ```php
@@ -698,11 +674,9 @@ Navigator::download('/path/to/file.txt');
 });
 ```
 
-# Mensagem de Agradecimento
+## Mensagem de Agradecimento
 
-<div style="text-align: center; margin-top: 20px;">
-    <img loop=infinite src="https://i.pinimg.com/originals/b0/33/9e/b0339e369ffe544ed24a52cbad426ccd.gif" alt="Motivational GIF" width="300">
-</div>
+![Motivational GIF](https://i.pinimg.com/originals/b0/33/9e/b0339e369ffe544ed24a52cbad426ccd.gif)
 
 Agradecemos sinceramente por dedicar seu tempo a ler esta documentação. Esperamos que você encontre tudo o que precisa de forma clara e direta. Trabalhamos com empenho para tornar o Navigator uma ferramenta simples e eficiente, permitindo a criação de aplicações e APIs com facilidade. Se chegou até aqui, esperamos que este projeto seja útil para você. Caso tenha dúvidas ou sugestões, sinta-se à vontade para entrar em contato.
 
