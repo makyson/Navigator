@@ -1,5 +1,3 @@
-espero que entendar o projeto
-
 <div style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 10px; background-color: #2a2a2a; color: white; border-bottom: 2px solid #444;">
     <div style="display: flex; align-items: center; gap: 15px;">
         <a href="https://gessointegral.com.br">
