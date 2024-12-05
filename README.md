@@ -1,6 +1,6 @@
 # Navigator
 
-| ![Gesso Integral Logo](https://sistema2.gessointegral.com.br/industria/sistema/imagens/gessointegral_new_logo.jpeg){width=80px} | **Navigator** | ![PHP Logo](https://www.php.net/images/logos/php-logo.svg){width=60px} |
+| ![Gesso Integral Logo](https://sistema2.gessointegral.com.br/industria/sistema/imagens/gessointegral_new_logo.jpeg){width=30px} | **Navigator** | ![PHP Logo](https://cdn.freebiesupply.com/logos/large/2x/php-1-logo-png-transparent.png)){width=30px} |
 | :---------------------------------------------------------------------------------------------------------------------------: | :-----------: | :--------------------------------------------------------------------: |
 
 
