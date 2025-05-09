@@ -10,7 +10,7 @@
 
 ## O que é Navigator?
 
-O **Navigator** é um pacote PHP inspirado nos sistemas de roteamento do **Express.js** (Node.js) e do **Navigator** (PHP) e Flight(php). Ele visa ser um esqueleto de projeto PHP simples de configurar e usar, permitindo inicializações rápidas e flexíveis.
+O **Navigator** é um pacote PHP inspirado nos sistemas de roteamento do **Express.js** (Node.js) e do **Navigator** (PHP) e **Flight**(php). Ele visa ser um esqueleto de projeto PHP simples de configurar e usar, permitindo inicializações rápidas e flexíveis.
 
 ---
 
